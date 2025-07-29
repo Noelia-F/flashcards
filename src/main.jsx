@@ -1,4 +1,6 @@
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
+
+import './reset.css';
 
 import App from './App';
 

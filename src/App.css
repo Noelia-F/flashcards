@@ -1,0 +1,125 @@
+:root {
+  --primary: rgb(14, 83, 60);
+  --primary-light: rgb(200, 231, 222);
+  --primary-dark: rgb(11, 63, 46);
+  --base: #333;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 0.5rem;
+  background-color: var(--primary-light);
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: normal;
+  margin: 0.5rem 0;
+}
+
+.title--l {
+  font-size: 1.75rem;;
+}
+
+.text {
+  font-size: 1rem;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--base);
+  border-radius: 5px;
+}
+
+.button {
+  border: none;
+  padding: 0.5rem;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button--primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button--primary:disabled {
+  background-color: var(--primary-light);
+}
+
+.button--primary:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+.button--secondary {
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.button--secondary:disabled {
+  color: var(--primary-light);
+}
+
+.button--secondary:hover:not(:disabled) {
+  color: var(--primary-dark);
+}
+
+.section--cards {
+  min-width: 200px;
+}
+
+.empty {
+  margin: auto;
+}
+
+.card-list {
+  margin: 0;
+  padding: 0.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--list-item {
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--primary-light);
+  border-radius: 5px;
+}
