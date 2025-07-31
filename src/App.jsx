@@ -7,6 +7,8 @@ const Form = ({onSubmit}) => {
   const [ backInput, setBackInput ] = useState('');
   const [ form, setForm ] = useState({front: '', back: ''});
   const [ formEmpty, setFormEmpty ] = useState(true);
+
+  const uniqueId = () =>  Math.floor(Math.random() * Date.now()).toString(16);
   
   const handleReset = () => {
     setFrontInput('');
@@ -16,7 +18,7 @@ const Form = ({onSubmit}) => {
   }
 
   const handleOnSubmit = (e) => {
-    const formCopy = {...form, front: frontInput, back: backInput};
+    const formCopy = {...form, front: frontInput, back: backInput, id: uniqueId };
     e.preventDefault();
     setForm(formCopy);
     handleReset();
@@ -56,8 +58,8 @@ const CardList = ({cards}) => {
     return (
       <ul className="card-list">
         {
-          cards.map((card, index) => (
-            <li key={index} className="card-list__element">
+          cards.map((card) => (
+            <li key={card.id} className="card-list__element">
               <Card card={card} />
             </li>
           ))
